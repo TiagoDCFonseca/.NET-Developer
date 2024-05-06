@@ -1,0 +1,65 @@
+body {
+    background-color: bisque;
+    padding: 10px 15px;
+}
+
+main {
+    background-color: plum;
+    margin: 40px;
+    padding: 20px;
+    border-radius: auto;
+}
+
+.nav-link {
+    background-color: beige;
+    color: blue;
+    padding: 10px;
+    border-radius: auto;
+
+}
+article{
+    font-size: large;
+}
+.Images img{
+    width: 300px;
+    height: 200px;
+}
+#videojogos{
+    color: blue;
+}
+#videojogos p{
+    color: darkolivegreen;
+}
+#gameImage .Image1{
+    background-image: url(game1.jpg) ;
+}
+#gameImage .Image2{
+    background-image: url(game2.jpg);
+}
+#bookImage{
+    background-image: url(book1.jpg);
+    width: fit-content;
+}
+#leitura{
+    color: blue;
+}
+#leitura p{
+    color: brown;
+}
+#musica{
+    color: blue;
+}
+#musica p{
+    color: darkolivegreen;
+}
+#Anime{
+    color: blue;
+}
+#Anime p{
+    color: brown;
+}
+#main-footer{
+    text-align: center;
+    margin-top: 20px;
+    background-color: crimson;
+}
