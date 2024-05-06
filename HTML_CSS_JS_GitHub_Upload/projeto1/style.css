@@ -1,0 +1,60 @@
+/*Toda a página fica com a cor rosa*/
+body {
+    background-color: pink;
+}
+main{
+    background-color: bisque;
+    border-radius: 2px;
+    padding: 20px, 30px;
+}
+p {
+    color: black;
+}
+#section1 p{
+    background-color: blue;
+}
+#section2 p{
+    font-size: large;
+    color: cornflowerblue;
+    margin: 20px;
+}
+/*Link a uma classe que chamei de container por causa do div */
+/*Contém algumas definições padrão como margem, cor e limites*/
+.container {
+    margin: 20px;
+    padding: 10px;
+    background-color: darkblue;
+    border-radius: 5px;
+}
+
+/*
+Abaixo herdando da classe container só mudo a cor do background
+*/
+#Teste1 {
+    margin: 40px;
+    padding: 0px;
+    background-color: aqua;
+}
+
+#Teste2 {
+    padding: 40px;
+    background-color: blueviolet;
+}
+
+.articleContainer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(232, 142, 24);
+    border: 1px;
+    border-radius: 5px;
+}
+
+#TesteArticle {
+    background-color: aquamarine;
+}
+
+#main-footer {
+    text-align: center;
+    margin-top: 20px;
+    background-color: crimson;
+}
