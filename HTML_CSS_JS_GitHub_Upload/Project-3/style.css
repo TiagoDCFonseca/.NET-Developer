@@ -1,0 +1,54 @@
+body{
+    height: auto;
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: black;
+    font-family: "Marcellus", serif;
+    font-size: larger;
+    color: wheat;
+    margin: auto;
+}
+button{
+    font-family: "Marcellus", serif;
+    color: black;
+    font-size: 16px;
+    background-color: burlywood;
+    display: inline-block;
+    height: fit-content;
+    justify-content: flex-start;
+    
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: wheat;
+}
+#hero{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    height: 33vh;
+    display: flex;
+}
+.logo{
+    height: 33vh;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+.address{
+    height: 33vh;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: wheat;
+}
