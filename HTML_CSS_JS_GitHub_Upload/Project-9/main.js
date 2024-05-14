@@ -38,13 +38,3 @@ function comprar(id){
 
    window.location = "http://127.0.0.1:5500/HTML_CSS_JS_GitHub_Upload/Project-9/checkout.html"
 }
-/*
- console.log(`Comprou o produto com o id: ${id}`)
-    //const produtoComprado = produtos.find(produto => produto.id === id)
-    //localStorage.setItem("produtoComprado", produtoComprado)  
-    for(let i = 0; i > produtos.length; i++){
-        if(produtos[i].id == id){
-            console.log(produtos[i])
-        }
-    }
-*/ 
