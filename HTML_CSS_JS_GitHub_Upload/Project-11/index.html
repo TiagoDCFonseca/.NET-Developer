@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&family=Jersey+10&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Marcellus&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ropa+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+</head>
+
+<body>
+
+    <header class="cabeçalho">
+        <a href="index.html"><h1 class="logo">Soluções de Informática</h1></a>
+        <!--Cria um botão com classe chamada btn-menu que tem 1 icone em que a class pega do bootstrap-->
+        <button class="btn-menu"><i class="fa fa-bars fa-lg"></i></button>
+        <nav class="menu">
+            <a href="#" class="btn-close"><i class="fa fa-times" aria-hidden="true"></i></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Cliente</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Quem Somos</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="banner">
+    <div class="title">
+        <h2>VAMOS INOVAR</h2>
+        <h3>Criamos experiências e estabelecemos ações estratégicas que ligam marcas e consumidores.</h3>
+    </div>
+    <div class="button">
+        <button class="btn-registar">Registar <i class="fa fa-arrow-circle-right"></i></button>
+        <button class="btn-sobre">Sobre <i class="fa fa-question-circle"></i></button>
+    </div>
+</div>
+<main class="serviços">
+    <article class="serviço">
+        <a href="#"><img src="img/1.jpg"></a>
+        <div class="inner">
+            <a href="#">Campanhas Publicitárias</a>
+            <h4>Impressões</h4>
+            <p>Se precisar de criar algum material específico, pode contar com a nossa equipa de profissionais, que criará todas as suas campanhas publicitárias. VT, outdoor, folder, anúncio e muito mais para sua empresa com os mais altos padrões de qualidade.</p>
+        </div>
+    </article>
+    <article class="serviço">
+        <a href="#"><img src="img/2.jpg"></a>
+        <div class="inner">
+            <a href="#">Campanhas Publicitárias</a>
+            <h4>Impressões</h4>
+            <p>Se precisar de criar algum material específico, pode contar com a nossa equipa de profissionais, que criará todas as suas campanhas publicitárias. VT, outdoor, folder, anúncio e muito mais para sua empresa com os mais altos padrões de qualidade.</p>
+        </div>
+    </article>  <article class="serviço">
+        <a href="#"><img src="img/3.jpg"></a>
+        <div class="inner">
+            <a href="#">Campanhas Publicitárias</a>
+            <h4>Impressões</h4>
+            <p>Se precisar de criar algum material específico, pode contar com a nossa equipa de profissionais, que criará todas as suas campanhas publicitárias. VT, outdoor, folder, anúncio e muito mais para sua empresa com os mais altos padrões de qualidade.</p>
+        </div>
+    </article>
+</main>
+<section class="newsletter">
+    <h2>Inscreva-se agora</h2>
+    <h3>Receber notícias, dicas e muito mais</h3>
+    <form>
+        <input type="email" name="email" placeholder="O seu email">
+        <button>Registar</button>
+    </form>
+</section>
+<footer class="rodape">
+    <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-google"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+    </div>
+    <p class="copyright">Copyright &copy; 2024</p>
+</footer>
+<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+    $(".btn-menu").click(function(){
+        $(".menu").show();
+    })
+    $(".btn-close").click(function(){
+        $(".menu").hide();
+    });
+</script>
+</body>
+</html>
