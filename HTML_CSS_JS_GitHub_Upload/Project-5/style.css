@@ -1,0 +1,287 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+}
+main{
+    width: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.6rem;
+    background-color: white;
+    z-index: 1;
+}
+#portfolio{
+    width: 100%;
+    margin-top: 60px;
+}
+#portfolio .images-row{
+    height: 600px;
+    display: flex;
+}
+
+.images-row div{
+    flex: 1;
+    background-size: cover;
+}
+.images-row div:hover{
+    opacity: 50%;
+}
+/*Colocar as imagens em cada <div> */
+#portfolio .image-1 {
+    background-image: url("./img/1.jpeg");
+}
+#portfolio .image-2{
+    background-image: url("./img/2.jpeg");
+}
+#portfolio .image-3{
+    background-image: url("./img/3.jpeg");
+}
+#portfolio .image-4{
+    background-image: url("./img/4.jpeg");
+}
+#portfolio .image-5{
+    background-image: url("./img/5.jpeg");
+}
+#portfolio .image-6{
+    background-image: url("./img/6.jpeg");
+}
+#portfolio .image-7{
+    background-image: url("./img/7.jpeg");
+}
+#portfolio .image-8{
+    background-image: url("./img/8.jpeg");
+}
+#portfolio .image-9{
+    background-image: url("./img/9.jpeg");
+}
+#portfolio .image-10{
+    background-image: url("./img/10.jpeg");
+}
+#portfolio .image-11{
+    background-image: url("./img/11.jpeg");
+}
+#portfolio .image-12{
+    background-image: url("./img/12.jpeg");
+}
+
+.page-selector{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-selector button{
+    background-color: white;
+    border: none;
+    padding: 10px, 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+.page-selector button:hover{
+ background-color: gray;  
+}
+
+#about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: gainsboro;
+    text-align: left;
+}
+
+.about-intro{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.about-intro p{
+    text-align: left;
+}
+
+.skills{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+.skill {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.max-value{
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+.value{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    background-color: gray;
+}
+.skill-1 .value{
+    width: 95%;
+}
+.skill-2 .value{
+    width: 85%;
+}
+.skill-3 .value{
+    width: 80%;
+}
+
+.download-resume{
+    margin-top: 10px;
+    background-color: gainsboro;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: flex-start;
+    
+}
+.download-resume:hover{
+    background-color: lightgray;
+}
+
+.fares{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.fare {
+    margin: 0 10px;
+    border: 1px black;
+}
+.fare-name{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+}
+.fare-features{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+.fare-feature{
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.fare-price{
+    margin-top: 10px;
+}
+
+.price, .price-per-month{
+    color: black;
+}
+.sign-up{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: grey;
+}
+#contact{
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: lightgrey;
+    width: 100%;
+}
+#contact-form{
+    display: inline-block;
+    text-align: left;
+    width: 60%;
+}
+.input-group label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    background-color: whitesmoke;
+    border: 1px black;
+    border-radius: 5px;
+}
+
+#contact-form input[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+#contact-form input[type="submit"]:hover{
+    background-color: whitesmoke;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding: 20px;
+    flex-direction: column;
+}
+.pre-footer{
+    display: flex;
+    flex: 1;
+   margin-right: 20px;
+}
+
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags div{
+    background-color: gainsboro;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.credits{
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px;
+}
