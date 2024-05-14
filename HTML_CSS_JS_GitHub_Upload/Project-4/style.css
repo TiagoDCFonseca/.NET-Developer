@@ -1,0 +1,263 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+.fixed-icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+}
+
+.fixed-icons a{
+    display: inline-block;
+    margin-left: 10px;
+}
+.fixed-icons img{
+    padding: 10px;
+    background-color: gainsboro;
+
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.topnav {
+    width: 100%;
+    height: 100%;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav .services{
+    position: relative;
+}
+
+nav .services:hover{
+    background-color: gray;
+    
+}
+
+.services-dropdown{
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    margin: 0;
+    display: none;
+    background-color: antiquewhite;
+    z-index: 1;
+    text-align: right;
+}
+
+.services-dropdown li{
+    list-style: none;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.services-dropdown li a {
+    display: block;
+    padding: 10px;
+}
+
+.services-dropdown a:hover{
+    background-color: lightgray;
+}
+
+.services:hover .services-dropdown{
+    display: initial;
+}
+
+nav .member{
+    position: relative;
+}
+
+nav .member:hover{
+    background-color: gray;;
+}
+
+.member-dropdown{
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    margin: 0;
+    display: none;
+    background-color: antiquewhite;
+    z-index: 1;
+    text-align: right;
+}
+
+.member-dropdown li{
+    list-style: none;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.member-dropdown li a{
+    display: block;
+    padding: 10px;
+}
+.member-dropdown li a:hover{
+    background-color: lightgray;
+}
+
+.member:hover .member-dropdown{
+    display: initial;
+}
+
+
+
+
+.left-text a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-style: italic;
+    position: relative;
+    left: 40px;
+}
+.right-text{
+    display: flex;
+    align-items: center;
+}
+.right-text a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    display: inline;
+    position: relative;
+    right: 50px;
+    justify-content: space-evenly;
+    letter-spacing: 8px;
+    margin-right: 10px;
+}
+.website-logo{
+    position: relative;
+    display: inline-block;
+
+}
+.website-logo img{
+    display: block;
+    max-width: 100%;
+   
+}
+.logo-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: bold;
+    letter-spacing: 8px;
+    font-size: 2.5rem;
+    color: darkgrey;
+}
+#about{
+    display: flex;
+    margin-top: 50px;
+}
+.text-about{
+    flex: 1;
+    text-align: center;
+    margin-right: 60px;
+}
+.text-about p{
+    text-align: justify;
+}
+.grey-text{
+    font-weight: lighter;
+    color: gray;
+}
+.image-about{
+    flex: 1;
+    margin-left: 60px;
+}
+.image-about img{
+    width: 400px;
+    height: 300px;
+}
+#menu{
+    display: flex;
+    margin-top: 60px;
+}
+.menu-text{
+    flex: 1;
+    margin-left: 60px;
+}
+.menu-text h1{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+.menu-text h4{
+    font-size: 1.2rem;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.menu-text p{
+    font-size: 1rem;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.menu-image{
+    flex: 1;
+    margin-left: 60px;
+}
+.menu-image img{
+    width: 400px;
+    height: 600px;
+}
+#contact{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.contact-intro{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.contact-form{
+    width: 50%;
+    margin-top: 20px;
+    background-color: gainsboro;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px; 
+    padding: 10px; 
+    box-sizing: border-box;
+    border: 1px solid #562929; 
+    border-radius: 4px; 
+}
+footer{
+    margin-top: 60px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 32px;
+    background-color: gray;
+}
+.media-icons img{
+    width: 50px;
+    height: 50px;
+}
