@@ -1,0 +1,69 @@
+-- Cria a bd intergalaticos
+create database if not exists Intergalaticos;
+
+use Intergalaticos;
+
+-- criar schemas chamados Jogadores e Equipas
+create schema if not exists Jogadores;
+create schema if not exists Equipas;
+
+-- Criar tabela jogador dentro do schema jogadores
+create table Jogadores.Jogador(
+Id int auto_increment primary key,
+NomeJogador varchar(50) not null,
+NumeroCamisola int not null,
+DtNasciment date null,
+AlteracaoData datetime not null default current_timestamp
+);
+
+-- Cria tabela Equipa dentro do schema Equipas
+create table Equipas.Equipa(
+Id int auto_increment primary key,
+JogadorId int not null,
+Equipa varchar(50) not null,
+Cidade varchar(50) not null,
+Descricao varchar(50) not null,
+AlteracaoData datetime not null default current_timestamp,
+foreign key (JogadorId) references Jogadores.Jogador(Id)
+);
+
+-- Cria tablela InformacoesAdicionais dentro do schema Equipas
+create table Equipas.InformacoesAdicionais(
+Id int auto_increment primary key,
+JogadorId int not null,
+Salario decimal(10,2) not null,
+AlteracaoData datetime not null default current_timestamp,
+foreign key (JogadorId) references Jogadores.Jogador(Id)
+);
+
+
+-- Tabela Jogador
+insert into Jogadores.Jogador (NomeJogador, NumeroCamisola, DtNascimento, AlteracaoData)
+values ('Messi', 10, '1987-06-24', CURRENT_TIMESTAMP),
+       ('Ronaldo', 7, '1985-02-05', CURRENT_TIMESTAMP),
+       ('Pizzi', 21, '1989-10-06', CURRENT_TIMESTAMP),
+       ('Maradona', 10, '1960-10-30', CURRENT_TIMESTAMP),
+       ('Futre', 12, '1966-02-28', CURRENT_TIMESTAMP);
+
+-- Tabela Equipa
+insert into Equipas.Equipa (JogadorId, Equipa, Cidade, Descricao, AlteracaoData)
+values (1, 'Barcelona', 'Barcelona', '', CURRENT_TIMESTAMP),
+       (2, 'Juventus', 'Turim', 'Capitao', CURRENT_TIMESTAMP),
+       (3, 'Benfica', 'Lisboa', 'Capitao', CURRENT_TIMESTAMP),
+       (4, 'Napoli', 'Napoles', '', CURRENT_TIMESTAMP),
+       (5, 'Atlético Madrid', 'Madrid', '', CURRENT_TIMESTAMP);
+
+-- Tabela InformacoesAdicionais
+insert into Equipas.InformacoesAdicionais (JogadorId, Salario, AlteracaoData)
+values (1, 1000000, CURRENT_TIMESTAMP),
+       (2, 2000000, CURRENT_TIMESTAMP),
+       (3, 110000, CURRENT_TIMESTAMP),
+       (4, 230000, CURRENT_TIMESTAMP),
+       (5, 1200000, CURRENT_TIMESTAMP);
+
+select * from Equipas.InformacoesAdicionais;
+select * from Equipas.Equipa;
+select * from Jogadores.Jogador;
+
+-- Só no t-SQL faz o select da tabela e funciona em tudo o que tem from e não bloqueia a tabela não impedindo os outros de trabalhar
+-- Select * from tabela A with(nolock)
