@@ -1,0 +1,63 @@
+CREATE DATABASE BaseTeste;
+
+USE BaseTeste;
+
+CREATE TABLE Carro (
+    Matricula CHAR(10) PRIMARY KEY,
+    Marca CHAR(20) NOT NULL,
+    Modelo CHAR(20) NOT NULL,
+    Cor CHAR(20) NOT NULL,
+    Cilindrada INT
+);
+    
+    CREATE TABLE Pessoa (
+    CC CHAR(15) PRIMARY KEY,
+    Nome CHAR(60) NOT NULL,
+    Morada CHAR(120),
+    Matricula CHAR(10) NOT NULL
+);
+     
+    alter table Pessoa add foreign key(Matricula) references Carro(Matricula) on delete restrict on update restrict;
+
+    insert into Carro values ();
+    *
+    insert into Carro(Matricula, Marca, Modelo, Cor, Cilindrada) values ('45-77-AA', 'Fiat', 'Uno', 'Cinzento', 1100);
+
+SELECT 
+    *
+FROM
+    Carro;
+    insert into Carro (Matricula, Marca, Modelo, Cor, Cilindrada) values ('21-05-EN', 'Opel', 'Astra', 'Cinzento', 1400);
+    insert into Carro (Matricula, Marca, Modelo, Cor, Cilindrada) values ('89-AU-22', 'Renaul', 'Clio', 'Vermelho', 1200);
+    insert into Carro (Matricula, Marca, Modelo, Cor, Cilindrada) values ('99-99-OM', 'Opel', 'Corsa', 'Azul', 1100);
+    insert into Carro (Matricula, Marca, Modelo, Cor, Cilindrada) values ('AT-87-54', 'Mini', 'Cooper', 'Amarelo', 1500);
+    insert into Carro (Matricula, Marca, Modelo, Cor, Cilindrada) values ('33-XX-01', 'Honda', 'Civic', 'Verde', 1600);
+
+select * from Carro;
+
+insert into Pessoa(CC, Nome, Morada, Matricula) values('123456', 'Maria', 'Rua X', '45-77-AA');
+
+select * from Pessoa;
+
+insert into Pessoa(CC, Nome, Morada, Matricula) values('356363', 'Celia', 'Rua A', '21-05-EN');
+insert into Pessoa(CC, Nome, Morada, Matricula) values('13453656', 'João', 'Rua X', '89-AU-22');
+insert into Pessoa(CC, Nome, Morada, Matricula) values('93445676', 'Tiago', 'Rua Y', '99-99-OM');
+insert into Pessoa(CC, Nome, Morada, Matricula) values('34454656', 'Erika', 'Rua V', '33-XX-01');
+insert into Pessoa(CC, Nome, Morada, Matricula) values('133243456', 'Ricardo', 'Rua Z', 'AT-87-54');
+
+
+select Marca, Modelo, Cilindrada from Carro where Cilindrada < 1500;
+
+select Marca, Modelo, Cilindrada from Carro where Cilindrada > 1500;
+
+select * from Carro where Cor Like 'Cin%';
+
+select * from Carro where Cor > 'B';
+
+select * from Carro order by Marca asc;
+
+select * from Carro order by Marca desc;
+
+select * from Carro order by Marca desc, Modelo asc;
+
+select * from Carro where Cilindrada > 1300 and Modelo <> 'Uno' and Matricula Like '%1%'
