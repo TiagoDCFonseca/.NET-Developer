@@ -1,0 +1,93 @@
+-- criação de bd
+CREATE DATABASE IF NOT EXISTS Store;
+
+-- Criação de Tabelas
+USE Store;
+
+-- Tabela Clientes
+DROP TABLE IF EXISTS Cliente;
+CREATE TABLE Cliente (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Pnome VARCHAR(50) NOT NULL,
+    Unome VARCHAR(50) NOT NULL,
+    DtNasc DATE NULL,
+    LastModifiedUser VARCHAR(50) NOT NULL,
+    LastModifiedDate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabela InfoCliente
+DROP TABLE IF EXISTS InfoCliente;
+CREATE TABLE InfoCliente (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    ClienteId INT NOT NULL,
+    Salario DECIMAL(8,2) NULL,
+    Morada VARCHAR(50) NOT NULL,
+    Localidade VARCHAR(50) NOT NULL,
+    CodPostal VARCHAR(10) NOT NULL,
+    LastModifiedUser VARCHAR(50) NOT NULL,
+    LastModifiedDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ClienteId) REFERENCES Cliente(Id)
+);
+
+-- Tabela Produto
+DROP TABLE IF EXISTS Produto;
+CREATE TABLE Produto (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Nome VARCHAR(50) NOT NULL,
+    DesProduto VARCHAR(50),
+    LastModifiedUser VARCHAR(50) NOT NULL,
+    LastModifiedDate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Tabela InfoProduto
+DROP TABLE IF EXISTS InfoProduto;
+CREATE TABLE InfoProduto (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    ClienteId INT NOT NULL,
+    ProdutoId INT NOT NULL,
+    LastModifiedUser VARCHAR(50) NOT NULL,
+    LastModifiedDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ClienteId) REFERENCES Cliente(Id),
+    FOREIGN KEY (ProdutoId) REFERENCES Produto(Id)
+);
+
+-- Exibe os Dados
+SELECT * FROM Cliente;
+SELECT * FROM InfoCliente;
+SELECT * FROM Produto;
+SELECT * FROM InfoProduto;
+
+-- Limpa os dados da tabela Cliente;
+-- TRUNCATE TABLE Cliente;
+
+-- Inserts
+
+INSERT INTO Cliente (Pnome, Unome, DtNasc, LastModifiedUser) VALUES ('Ana', 'Grade', '1990-02-28', 'BD');
+INSERT INTO Cliente (Pnome, Unome, DtNasc, LastModifiedUser) VALUES ('Rui', 'Costa', '1946-12-13', 'BD');
+INSERT INTO Cliente (Pnome, Unome, DtNasc, LastModifiedUser) VALUES ('Luis', 'Antunes', '1956-11-08', 'BD');
+INSERT INTO Cliente (Pnome, Unome, DtNasc, LastModifiedUser) VALUES ('John', 'Smith', '2000-04-04', 'BD');
+INSERT INTO Cliente (Pnome, Unome, DtNasc, LastModifiedUser) VALUES ('Juliana', 'Carvalho', '1998-01-01', 'BD');
+
+-- Outros Inserts
+INSERT INTO Produto (Nome, DesProduto, LastModifiedUser) VALUES ('Arroz', 'Sigala', 'BD');
+INSERT INTO Produto (Nome, DesProduto, LastModifiedUser) VALUES ('Massa', 'Nacional', 'BD');
+INSERT INTO Produto (Nome, DesProduto, LastModifiedUser) VALUES ('Batata Doce', NULL, 'BD');
+INSERT INTO Produto (Nome, DesProduto, LastModifiedUser) VALUES ('Iogurtes', NULL, 'BD');
+
+-- Outros Inserts
+INSERT INTO InfoCliente (ClienteId, Salario, Morada, Localidade, CodPostal, LastModifiedUser) VALUES (1, 1500.00, 'Rua da Liberdade, nº24', 'Lisboa', '3877-201', 'BD');
+INSERT INTO InfoCliente (ClienteId, Salario, Morada, Localidade, CodPostal, LastModifiedUser) VALUES (2, 2540.45, 'Av da Luz, nº220', 'Porto', '4888-001', 'BD');
+INSERT INTO InfoCliente (ClienteId, Salario, Morada, Localidade, CodPostal, LastModifiedUser) VALUES (3, 535.46, 'Rua da Costodia, nº01', 'Mafra', '1987-112', 'BD');
+INSERT INTO InfoCliente (ClienteId, Salario, Morada, Localidade, CodPostal, LastModifiedUser) VALUES (4, 999.99, 'Travessa da Ribeira', 'Lisboa', '3765-222', 'BD');
+INSERT INTO InfoCliente (ClienteId, Salario, Morada, Localidade, CodPostal, LastModifiedUser) VALUES (5, 10000, 'Av da Fronteza', 'Vila Nova De Gaia', '3998-543', 'BD');
+
+INSERT INTO InfoProduto (ClienteId, ProdutoId, LastModifiedUser) VALUES (1, 1, 'BD');
+INSERT INTO InfoProduto (ClienteId, ProdutoId, LastModifiedUser) VALUES (1, 2, 'BD');
+INSERT INTO InfoProduto (ClienteId, ProdutoId, LastModifiedUser) VALUES (2, 3, 'BD');
+INSERT INTO InfoProduto (ClienteId, ProdutoId, LastModifiedUser) VALUES (4, 4, 'BD');
+INSERT INTO InfoProduto (ClienteId, ProdutoId, LastModifiedUser) VALUES (2, 5, 'BD');
+
+TRUNCATE TABLE InfoProduto;
+TRUNCATE TABLE InfoCliente;
+DROP TABLE IF EXISTS Produto;
+DROP TABLE IF EXISTS Cliente;
