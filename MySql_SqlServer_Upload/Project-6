@@ -1,0 +1,165 @@
+-- Adventure Works - Queries --
+
+
+-- 1 --
+
+select * 
+from Person.Person
+
+
+-- 2 --
+
+select * 
+from Production.Product 
+	where DiscontinuedDate is not null;
+
+-- 3 --
+
+select FirstName, LastName, Title 
+from Person.Person 	
+	where TitleOfCourtesy is not null;
+
+-- 4 --
+
+select 
+	d.DepartmentName, count(edh.BusinessEntity) as TotalEmpregados
+from 
+	HumanResources.EmployeeDepartmentHistory edh
+inner join
+	HumanResources.Department d on edh.DepartmentID = d.DepartmentID
+group by
+	d.DepartmentName;
+
+-- 5 -- 
+
+select top 5 
+	P.Name as NomeProduto 
+    SUM(SOD.OrderQty) as QtdVendida 
+from Sales.SalesOrderDetail SOD 
+inner join 
+	Production.Product P on SOD.ProductID = P.ProductID
+group by
+	P.Name
+order by
+	SUM(SOD.OrderQty) desc;
+
+-- 6 --
+
+select CustomerID, FirstName, LastName, Phone, EmailAddress 
+from Sales.Customer;
+
+-- 7 --
+
+select e.EmployeeName
+from HumanResources.Employee e
+left join
+	HumanResources.EmployeeLeave el on e.EmployeeID = el.EmployeeID
+where el.LeaveCount is null;
+
+-- 8 --
+
+select *
+from Sales.SalesOrderHeader soh
+inner join
+	Sales.SalesOrderDetail sod on soh.OrderID = sod.OrderID
+inner join
+	Production.Product p on sod.ProductID = p.ProductID
+inner join
+	Production.ProductCategory pc on p.ProductCategoryID = pc.ProductCategoryID
+where year(soh.OrderDate) = 2019
+group by
+	pc.CategoryName;
+
+-- 9 --
+
+select top 3
+	ssp.SalesPersonName, 
+    sum(soh.TotalDue) as TotalVendas
+from 
+	Sales.SalesPerson ssp
+inner join
+	Sales.SalesOrderHeader soh on ssp.SalesPersonID = soh.SalesPersonID
+group by
+	ssp.SalesPersonName
+order by
+	TotalVendas desc;
+
+-- 10 --
+
+select *
+from Purchasing.Vendor v
+inner join
+	Person.Address a on v.VendorID = a.VendorID
+where a.State in (
+	select distinct State
+    from Person.Address
+    where AddressTypeID = --Inserir o criterio de busca
+    );
+
+-- 11 --
+
+select p.ProductName, pi.Qtd_Stock
+from Production.Product p
+inner join
+	Production.ProductInventory pi on p.ProductID = pi.ProductID
+order by
+	p.ProductName;
+
+-- 12 --
+
+select d.DepartmentName, avg(e.Salary) as MediaSalarial
+from HumanResources.Employee e
+inner join
+	HumanResources.Department d on e.DepartmentID = d.DepartmentID
+group by
+	d.DepartmentName;
+
+-- 13 --
+
+select * 
+from Sales.SalesOrderHeader 
+	where OrderDate >= dateadd(month, -3, getdate());
+
+-- 14 --
+
+select Description 
+from HumanResources.Job;
+
+-- 15 --
+
+select c.CustomerName, sum(soh.TotalDue) as TotalCompras
+from Sales.Customer c
+inner join
+	Sales.SalesOrderHeader soh on c.CustomerID = soh.CustomerID
+where year(soh.OrderDate) = 2020
+group by
+	c.CustomerName;
+
+-- 16 --
+
+select * 
+from Sales.SalesTerritory;
+
+-- 17 --
+
+select *
+from Purchasing.PurchaseOrderHeader poh
+inner join 
+	Purchasing.PurchaseOrderDetail pod on poh.PurchaseOrderID = pod.PurchaseOrderID
+where pod.UnitPrice > 1000;
+
+-- 18 --
+
+select c.CustomerName, sum(soh.TotalDue) as TotalCompras
+from Sales.Customer c
+inner join
+	Sales.SalesOrderHeader soh on c.CustomerID = soh.CustomerID
+group by
+	c.CustomerName
+having sum(soh.TotalDue) > 50000;
+	
+
+-- 19 --
+
+select FirstName, LastName, Email 
+from Person.Person;
