@@ -1,0 +1,15 @@
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/bin/Debug/net8.0/Project_2
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/bin/Debug/net8.0/Project_2.deps.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/bin/Debug/net8.0/Project_2.runtimeconfig.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/bin/Debug/net8.0/Project_2.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/bin/Debug/net8.0/Project_2.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.AssemblyInfoInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.AssemblyInfo.cs
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.csproj.CoreCompileInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.sourcelink.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/refint/Project_2.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/Project_2.genruntimeconfig.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_2/obj/Debug/net8.0/ref/Project_2.dll
