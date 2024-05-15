@@ -1,0 +1,15 @@
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.AssemblyInfoInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.AssemblyInfo.cs
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.csproj.CoreCompileInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.sourcelink.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/bin/Debug/net8.0/Project_3
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/bin/Debug/net8.0/Project_3.deps.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/bin/Debug/net8.0/Project_3.runtimeconfig.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/bin/Debug/net8.0/Project_3.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/bin/Debug/net8.0/Project_3.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/refint/Project_3.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/Project_3.genruntimeconfig.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_3/obj/Debug/net8.0/ref/Project_3.dll
