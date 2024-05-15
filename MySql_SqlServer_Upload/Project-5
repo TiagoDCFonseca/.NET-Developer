@@ -1,0 +1,67 @@
+create database if not exists Aeroporto;
+
+use Aeroporto;
+
+create table if not exists Airlines(
+	AirlineID int auto_increment primary key,
+    Name varchar(100) not null,
+    HeadQuarters varchar(100) not null
+);
+
+create table if not exists Aircrafts(
+	AircraftID int auto_increment primary key,
+    AirlineID int not null,
+    Model varchar(50) not null,
+    Capacity int not null,
+    foreign key (AirlineID) references AirLines(AirlineID)
+);
+
+create table if not exists Flights(
+	FlightID int auto_increment primary key,
+    AircraftID int not null,
+    foreign key (AircraftID) references Aeroporto.Aircrafts(AircraftID),
+    Destination varchar(100) not null,
+    DepartureTime datetime not null default current_timestamp
+);
+
+insert into Airlines (AirlineID, Name, HeadQuarters) 
+values 	(1, 'AirLibre', 'Madrid'),
+		(2, 'NordicFlyer', 'Copenagen');
+
+select * from Airlines;
+
+insert into Aircrafts (AircraftID, Model, Capacity, AirlineID) 
+values	(1, 'A320', 150, 1),
+		(2, 'B737', 180, 2);
+
+select * from Aircrafts;
+
+insert into Flights(FlightID, AircraftID, Destination, DepartureTime)
+values 	(1, 1, 'Paris', '2023-08-01T09:00:00'),
+		(2, 2, 'Berlin', '2023-08-01T15:00:00');
+
+select * from Flights;
+
+-- Pergunta 3
+select * 
+from Flights 
+where AircraftID in (
+	select AircraftID 
+    from Aircrafts 
+    where Capacity >= 170);
+
+-- Pergunta 4
+select a.Name, ac.Model
+from Airlines as a
+inner join
+	Aircrafts as ac on a.AirlineID = ac.AirlineID
+inner join
+	Flights as f on ac.AircraftID = f.AircraftID
+where f.Destination = 'Paris';
+
+-- Pergunta 5
+set foreign_key_checks = 0;
+drop table if exists Airlines;
+drop table if exists Aircrafts;
+drop table if exists Flights;
+set foreign_key_checks = 1;
