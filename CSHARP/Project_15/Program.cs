@@ -17,17 +17,21 @@ namespace Project15
 
             Random aleatorio = new Random();
 
+            //Enquanto o i < 20 que é a quantidade de vezes que queremos executar o ciclo
+            // e incrementamos o i para passar ao ciclo seguinte
             for (int i = 0; i < 20; i++)
             {
                 numGerado = aleatorio.Next(1, 301);
                 Console.Write($"{numGerado} ");
 
                 total = total + numGerado;
-
+                
+                //Se o número gerado é maior que o valor da variável maior
                 if (numGerado > maior)
                 {
                     maior = numGerado;
                 }
+                //Se o número gerado é menor que o valor da variável menor
                 if (numGerado < menor)
                 {
                     menor = numGerado;
