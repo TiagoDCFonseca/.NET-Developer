@@ -1,0 +1,15 @@
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/bin/Debug/net8.0/Project_52
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/bin/Debug/net8.0/Project_52.deps.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/bin/Debug/net8.0/Project_52.runtimeconfig.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/bin/Debug/net8.0/Project_52.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/bin/Debug/net8.0/Project_52.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.GeneratedMSBuildEditorConfig.editorconfig
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.AssemblyInfoInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.AssemblyInfo.cs
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.csproj.CoreCompileInputs.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.sourcelink.json
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/refint/Project_52.dll
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.pdb
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/Project_52.genruntimeconfig.cache
+/Users/TiagoFonseca/Documents/GitHub/.NET-Developer/CSHARP/Project_52/obj/Debug/net8.0/ref/Project_52.dll
